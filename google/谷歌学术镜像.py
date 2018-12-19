@@ -3,7 +3,6 @@ import execjs
 from bs4 import BeautifulSoup
 import re
 from urllib import parse
-
 if __name__ == '__main__':
     url='http://ac.scmor.com/'
     headers={
