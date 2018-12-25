@@ -1,22 +1,14 @@
 # -*- coding: utf-8 -*-
 """
 Spyder Editor
-
+zuobangbang
+2018-12-25
 This is a temporary script file.
 """
 
-from urllib import request
-from urllib import parse
-from bs4 import BeautifulSoup
-from http import cookiejar
-from urllib.request import urlopen
 import requests
-from urllib import request, parse
 import time
 import hashlib
-import random
-
-
 
 def MD5(key):
     hash=hashlib.md5()
@@ -48,12 +40,7 @@ def translate(key):
 'action': 'FY_BY_REALTIME',
 'typoResult': 'false'}
     print(data)
-    
-    #print(data)
-    # 对data进行编码，因为参数data需要bytes格式
-    #data = parse.urlencode(data).encode()
 
-    # headers从右键检查Request Headers得到
     headers = {
 'Accept': 'application/json, text/javascript, */*; q=0.01',
 'Accept-Encoding': 'gzip, deflate',
@@ -68,9 +55,6 @@ def translate(key):
 'X-Requested-With': 'XMLHttpRequest'}
     html=requests.post(url,data=data,headers=headers).json()
     print(html['translateResult'][0][0])
-
-
-
 
 if __name__ == '__main__':
     translate("今天天气很好")
